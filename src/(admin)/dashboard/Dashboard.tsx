@@ -38,6 +38,7 @@ const Dashboard = () => {
   const columns: TableColumn<AdoptionRequest>[] = [
     {
       name: 'User Details',
+      minWidth: '200px',
       cell: (row) => (
         <div className="py-2">
           <div className="fw-bold">{row.userId?.firstName + '' + row.userId?.lastName || 'N/A'}</div>
@@ -48,6 +49,7 @@ const Dashboard = () => {
     },
     {
       name: 'Pet',
+      minWidth: '200px',
       cell: (row) => (
         <div>
           <div className="fw-bold">{row.petId?.name}</div>
@@ -57,6 +59,7 @@ const Dashboard = () => {
     },
     {
       name: 'Status',
+      minWidth: '200px',
       cell: (row) => (
         <span className={`badge flex gap-4 ${row.status === 'approved' ? 'bg-success' :
           row.status === 'rejected' ? 'bg-danger' : 'bg-warning text-dark'
