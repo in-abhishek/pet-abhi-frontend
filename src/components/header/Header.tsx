@@ -5,7 +5,7 @@ import { usePost } from '../../hooks/hooks';
 const Header = () => {
   const { accessToken, setAccessToken, user, setUser } = useAuth();
   const navigate = useNavigate()
-  const { execute: logoutExecute } = usePost<null, any>("/logout");
+  const { execute: logoutExecute } = usePost<void, any>("/logout");
   const handleLogout = () => {
     logoutExecute(null, {
       credentials: "include",
