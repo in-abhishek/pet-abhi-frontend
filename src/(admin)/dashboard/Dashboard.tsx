@@ -67,6 +67,7 @@ const Dashboard = () => {
     },
     {
       name: 'Actions',
+      minWidth: '200px',
       ignoreRowClick: true,
       cell: (row) => (
         <div className="flex gap-4">
